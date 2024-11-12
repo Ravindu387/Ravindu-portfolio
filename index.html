@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravindu Nimsara - Full Stack Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#1e3a8a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-500">Ravindu<span class="text-white">.dev</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="hover:text-blue-500 transition">About</a>
+                    <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+                    <a href="#skills" class="hover:text-blue-500 transition">Skills</a>
+                    <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed w-full bg-gray-900 shadow-lg z-40 mt-16">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-blue-500 transition">Home</a>
+                <a href="#about" class="hover:text-blue-500 transition">About</a>
+                <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+                <a href="#skills" class="hover:text-blue-500 transition">Skills</a>
+                <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-blue-900">
+        <div class="container mx-auto px-6 py-24 flex flex-col items-center">
+            <div class="mb-8 rounded-full overflow-hidden w-80 h-80 border-4 border-blue-500 shadow-lg">
+                <img src="images/profile.jpg" alt="Ravindu Nimsara" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 text-center">
+                Hi, I'm <span class="text-blue-500">Ravindu Nimsara</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-12">Full Stack Developer | ICET Trainee</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://github.com/Ravindu387" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full transition">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/ravindu-nimsara-840536312" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full transition">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg mb-6">
+                    I'm a trainee full-stack developer currently studying at ICET. My passion lies in creating efficient and user-friendly web applications using modern technologies. I specialize in both frontend and backend development, with expertise in various programming languages and frameworks.
+                </p>
+                <p class="text-lg">
+                    My journey in software development has equipped me with skills in HTML, CSS, JavaScript, TypeScript, Java, Dart (Flutter), Angular, Node.js, and Express.js. I'm also familiar with JavaFX and constantly expanding my knowledge in new technologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="relative">
+                <div class="overflow-x-auto pb-6 hide-scrollbar">
+                    <div class="flex space-x-6" style="min-width: min-content">
+                        <!-- Library Management System -->
+                        <div class="w-96 flex-none bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Library Management System</h3>
+                                <p class="text-gray-300 mb-4">A comprehensive library management solution built with Angular (Frontend) and Spring Boot (Backend).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Angular</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Spring Boot</span>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/Ravindu387/library-management-system-backend" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                        <i class="fab fa-github mr-2"></i>Backend
+                                    </a>
+                                    <a href="https://github.com/Ravindu387/library-mangement-system-frontend" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                        <i class="fab fa-github mr-2"></i>Frontend
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Defense System -->
+                        <div class="w-96 flex-none bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Defense System</h3>
+                                <p class="text-gray-300 mb-4">A Java Swing-based defense system application implementing OOP concepts with a user-friendly interface.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Java</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Swing</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">OOP</span>
+                                </div>
+                                <a href="https://github.com/Ravindu387/DefenceSystem-Using-Java-Swing.git" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                    <i class="fab fa-github mr-2"></i>View Project
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Mos Burgers POS -->
+                        <div class="w-96 flex-none bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Mos Burgers POS</h3>
+                                <p class="text-gray-300 mb-4">A modern web-based point of sale system for Mos Burgers, streamlining order processing and sales management.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">HTML</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CSS</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">JavaScript</span>
+                                </div>
+                                <a href="https://github.com/Ravindu387/MOS-Buger.git" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                    <i class="fab fa-github mr-2"></i>View Project
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Weather App -->
+                        <div class="w-96 flex-none bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Weather App</h3>
+                                <p class="text-gray-300 mb-4">A weather application built with HTML, CSS, and JavaScript, providing real-time weather information.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">HTML</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CSS</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">JavaScript</span>
+                                </div>
+                                <a href="https://github.com/Ravindu387/weather_app" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                    <i class="fab fa-github mr-2"></i>View Project
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Clothify -->
+                        <div class="w-96 flex-none bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Clothify</h3>
+                                <p class="text-gray-300 mb-4">A JavaFX-based clothing store management application featuring a user-friendly interface for efficient inventory and sales tracking</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">JavaFX</span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Java</span>
+                                </div>
+                                <a href="https://github.com/Ravindu387/Clothify" target="_blank" class="text-blue-500 hover:text-blue-400">
+                                    <i class="fab fa-github mr-2"></i>View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills & Technologies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fab fa-html5 text-4xl mb-4 text-blue-500"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-css3-alt text-4xl mb-4 text-blue-500"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-js text-4xl mb-4 text-blue-500"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-angular text-4xl mb-4 text-blue-500"></i>
+                    <p>Angular</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-node text-4xl mb-4 text-blue-500"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-java text-4xl mb-4 text-blue-500"></i>
+                    <p>Java</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-mobile-alt text-4xl mb-4 text-blue-500"></i>
+                    <p>Flutter</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-database text-4xl mb-4 text-blue-500"></i>
+                    <p>Databases</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 justify-center items-center ml-20">
+                    <a href="mailto:ravindunim6121@gmail.com" class="flex items-center space-x-6">
+                        <i class="fas fa-envelope text-2xl text-blue-500"></i>
+                        <span>ravindu_nimsara</span>
+                    </a>
+                    <a href="tel:0702703168" class="flex items-center space-x-4">
+                        <i class="fas fa-phone text-2xl text-blue-500"></i>
+                        <span>+94702703168</span>
+                    </a>
+                    <a href="https://www.instagram.com/t.d.r_nimsara_/profilecard/" target="_blank" class="flex items-center space-x-4">
+                        <i class="fab fa-instagram text-2xl text-blue-500"></i>
+                        <span>t.d.r_nimsara_</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61554998851254" target="_blank" class="flex items-center space-x-4">
+                        <i class="fab fa-facebook text-2xl text-blue-500"></i><span>Ravindu Nimsara</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Ravindu Nimsara. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const menu = document.getElementById('mobileMenu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
